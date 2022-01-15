@@ -16,7 +16,6 @@ def ytsearch(query):
       search = VideosSearch(query, limit=1)
       for r in search.result()["result"]:
          ytid = r['id']
-        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
         if len(r['title']) > 34:
             songname = r['title'][:35] + "..."
          else:
